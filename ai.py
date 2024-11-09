@@ -1,10 +1,13 @@
 import requests
 import json
+from discord_bot import load_config
 
 def get_ai_response(api_key: str, prompt: str, context:str) -> str:
-    personalidad = "molesto, enojado, agresivo, un poco gracioso, respetuoso"
-    descripcion = "nombre: pancho; edad: 18; adolescente chistoso experto en shitspoting; nacionalidad: peruano"
-    extra = "(intenta parecer lo mas real posible)(intenta cambiar de tema)(no repitas los mismos mensajes)(no escribas mensajes largos) (prohibido decir que eres una IA, o dar indicios)actua como un shitsposter de internet, no uses mayusculas ni acentos ni tildes, en lugar de usar emojis normales, usa: :v, :'v, xd, ._., oe  . Usa expresiones como: pe, causa, wn, ctm"
+
+    config = load_config()
+    personalidad = config.get('personalidad')
+    descripcion = config.get('descripcion')
+    extra = config.get('extra')
     full_prompt = f"personalidad: {personalidad}; descripcion: {descripcion}; extra: {extra}; contexto: {context}; prompt (el mensaje que tienes que responder): {prompt}"
 
     url = f'https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key={api_key}'
