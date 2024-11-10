@@ -18,5 +18,7 @@ def info(text):
     print(f"\x1b[37m[\x1b[38;5;44mINFO\x1b[37m]\x1b[38;5;130m {text}")
 def error(text):
     print(f"\x1b[37m[\x1b[31mERRO\x1b[37m]\x1b[38;5;130m {text}")
+def warn(text):
+    print(f"\x1b[37m[\x1b[38;5;173mWARN\x1b[37m]\x1b[38;5;130m {text}")
 def prompt(text):
     return input(f"\x1b[37m[\x1b[38;5;34m/\x1b[37m]\x1b[38;5;130m {text}")

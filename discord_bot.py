@@ -31,11 +31,14 @@ class DiscordBot:
             messages = re.json()
             messages_info = []
             for message in messages:
-                messages_info.append((message['author']['username'], message['content']))
+                author_id = message['author']['id']  # Obtener el ID del autor
+                author_username = message['author']['username']
+                content = message['content']
+                messages_info.append((author_id, author_username, content))
             return messages_info
         else:
             print(f"Error al obtener mensajes: {re.status_code}")
-            return None  
+            return None
     def typing(self):
         requests.post(f"https://discord.com/api/v9/channels/{self.channel_id}/typing", headers={"Authorization":f"{self.token}"})
     def start_message_loop(self, interval: int = 1):
@@ -48,6 +51,11 @@ class DiscordBot:
     def get_username(self):
         req = requests.get("https://discord.com/api/v9/users/@me", headers={"Authorization":self.token})
         return req.json().get("username")
+    def set_state(self, state, sexit:False):
+        req = requests.patch(f"https://discord.com/api/v9/users/@me/settings-proto/1", headers={"Authorization":self.token}, json={"settings":state})
+        if sexit:
+            exit()
+        return req.content
 def load_config():
     config = {}
     with open('config.txt', 'r') as file:
