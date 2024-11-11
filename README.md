@@ -39,7 +39,7 @@ Botini es un bot de Discord desarrollado en Python, diseñado para ofrecer una e
 
 4. **Ejecuta el bot**:
     ```bash
-    python botini.py
+    python .
     ```
 
 ## Uso
