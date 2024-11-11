@@ -6,6 +6,7 @@ Botini es un bot de Discord desarrollado en Python, diseñado para ofrecer una e
 
 - [Características](#características)
 - [Instalación](#instalación)
+- [Configuración](#configuración)
 - [Uso](#uso)
 - [Contribuciones](#contribuciones)
 - [Licencia](#licencia)
@@ -39,16 +40,31 @@ Botini es un bot de Discord desarrollado en Python, diseñado para ofrecer una e
 
 4. **Ejecuta el bot**:
     ```bash
-    python .
+    python botini.py
     ```
+
+## Configuración
+
+Puedes personalizar el comportamiento de la IA y otras configuraciones del bot en el archivo `config.txt`. Aquí están las principales opciones configurables:
+
+- **Personalidad y Descripción**: Ajusta la personalidad y descripción del bot para que responda con el estilo deseado.
+- **Parámetros de IA**:
+  - `temperature`: Controla la creatividad de las respuestas de la IA.
+  - `topK` y `topP`: Ajustan el enfoque en palabras más probables o en un rango amplio de palabras.
+- **Token y IDs de Discord**:
+  - `token`: El token de la cuenta de usuario que usa el bot.
+  - `channel_id`: ID del canal donde el bot enviará mensajes.
+  - `server_id`: ID del servidor. Si el bot está en un chat privado o grupo sin servidor, deja `server_id` vacío y Python lo detectará automáticamente.
 
 ## Uso
 
-- Una vez que Botini esté activo en el servidor, puedes usar los comandos disponibles y experimentar las respuestas automáticas de la IA.
-- **Comandos Disponibles**:
-    - `/ban [usuario]` - Banea al usuario especificado.
-    - `/kick [usuario]` - Expulsa al usuario especificado.
-    - Otros comandos para trolear y interactuar serán documentados o puedes explorarlos en el código fuente.
+Una vez que Botini esté activo en el servidor, puedes usar los comandos disponibles y experimentar las respuestas automáticas de la IA.
+
+### Comandos Disponibles
+
+- `/ban [ID]` - Banea al usuario especificado.
+- `/kick [ID]` - Expulsa al usuario especificado.
+- Otros comandos para trolear y interactuar se encuentran en el código fuente o puedes explorarlos en el bot directamente.
 
 **Nota**: Botini actúa con lógica propia en algunas interacciones, gracias a su integración con la IA, y puede reaccionar de forma espontánea en el chat.
 
