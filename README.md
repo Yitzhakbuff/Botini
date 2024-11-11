@@ -73,14 +73,12 @@ Una vez que Botini esté activo en el servidor, puedes usar los comandos disponi
 
 Aquí puedes ver algunas capturas de pantalla de Botini en acción:
 
+### Ejemplo del Menu
+![Menu](https://raw.githubusercontent.com/Yitzhakbuff/Botini/refs/heads/main/screenshots/s1.png)
+
 ### Ejemplo de Mensaje Respuesta
-![Botini Responde a un Usuario](images/respuesta-ejemplo.png)
+![Botini Responde a un Usuario](https://raw.githubusercontent.com/Yitzhakbuff/Botini/refs/heads/main/screenshots/s2.png)
 
-### Ejemplo de Moderación
-![Botini Modera el Chat](images/moderacion-ejemplo.png)
-
-### Configuración de Botini en `config.txt`
-![Archivo de Configuración](images/configuracion-ejemplo.png)
 
 
 ## Contribuciones
