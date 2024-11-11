@@ -68,6 +68,21 @@ Una vez que Botini esté activo en el servidor, puedes usar los comandos disponi
 
 **Nota**: Botini actúa con lógica propia en algunas interacciones, gracias a su integración con la IA, y puede reaccionar de forma espontánea en el chat.
 
+
+## Muestras
+
+Aquí puedes ver algunas capturas de pantalla de Botini en acción:
+
+### Ejemplo de Mensaje Respuesta
+![Botini Responde a un Usuario](images/respuesta-ejemplo.png)
+
+### Ejemplo de Moderación
+![Botini Modera el Chat](images/moderacion-ejemplo.png)
+
+### Configuración de Botini en `config.txt`
+![Archivo de Configuración](images/configuracion-ejemplo.png)
+
+
 ## Contribuciones
 
 Las contribuciones son bienvenidas. Puedes enviar tus mejoras o sugerencias a través de [GitHub](https://github.com/Yitzhakbuff/Botini/).
