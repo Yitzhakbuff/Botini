@@ -17,7 +17,7 @@ def get_ai_response(api_key: str, prompt: str, context: str) -> str:
     full_prompt = f" descripcion: {descripcion}; extra: {extra}; comandos: {comandos}; contexto: {context}; prompt (el mensaje que tienes que responder): {prompt}"
 
     # Definir la URL y el cuerpo de la solicitud
-    url = f'https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro-002:generateContent?key={api_key}'
+    url = f'https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={api_key}'
 
     data = {
         "contents": [

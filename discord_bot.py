@@ -51,6 +51,12 @@ class DiscordBot:
     def get_username(self):
         req = requests.get("https://discord.com/api/v9/users/@me", headers={"Authorization":self.token})
         return req.json().get("username")
+    def kick_user(self, userId, serverId):
+        req = requests.delete(f"https://discord.com/api/v9/guilds/{serverId}/members/{userId}", headers={"Authorization":self.token})
+        return req.content
+    def ban_user(self, userId, serverId):
+        req = requests.put(f"https://discord.com/api/v9/guilds/{serverId}/bans/{userId}", headers={"Authorization":self.token})
+        return req.content
     def set_state(self, state, sexit:False):
         req = requests.patch(f"https://discord.com/api/v9/users/@me/settings-proto/1", headers={"Authorization":self.token}, json={"settings":state})
         if sexit:
